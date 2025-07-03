@@ -1,0 +1,111 @@
+/* pizza.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6881c;
+  color: #333;
+}
+
+header {
+  background-color: #b22222;
+  color: rgb(12, 9, 9);
+  padding: 20px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav ul.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul.menu li a {
+  color: rgb(5, 4, 4);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul.menu li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.destaque {
+  background-color: #fff0e6;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.botão, button {
+  background-color: #b22222;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.botão:hover, button:hover {
+  background-color: #8b1a1a;
+}
+
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul.menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .destaque {
+    padding: 15px;
+  }
+}
+.menu{
+  color:
+}
