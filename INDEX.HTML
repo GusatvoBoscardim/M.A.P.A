@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça a Pizzaria Sabores em Fatias - Tradição e sabor em cada pedaço!">
+  <title>Inicio| Sabores em Fatias</title>
+  <link rel="stylesheet" href="pizza.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Sabores em Fatias</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="sobre animar">
+      <h2>Quem somos</h2>
+      <p>Desde 2005, a <strong>Sabores em Fatias</strong> oferece as melhores pizzas artesanais da região. Com ingredientes selecionados, massas caseiras e atendimento de qualidade, conquistamos o paladar e o coração de nossos clientes.</p>
+      <p>Nossa missão é proporcionar experiências inesquecíveis a cada fatia!</p>
+      <h3>Valores</h3>
+      <ul>
+        <li>Qualidade e sabor</li>
+        <li>Compromisso com o cliente</li>
+        <li>Tradição com inovação</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;2021 Sabores em Fatias</p>
+  </footer>
+
+  
+  <script>
+    function animarElementos() {
+      const elementos = document.querySelectorAll('.animar');
+      elementos.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const alturaTela = window.innerHeight;
+        if (top < alturaTela - 100) {
+          el.classList.add('visivel');
+        }
+      });
+    }
+    window.addEventListener('scroll', animarElementos);
+    window.addEventListener('load', animarElementos);
+  </script>
+
+  <style>
+    .animar {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .animar.visivel {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</body>
+</html>
