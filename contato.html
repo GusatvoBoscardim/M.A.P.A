@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Entre em contato com a Pizzaria Sabores em fatias. Tire dúvidas ou faça seu pedido.">
+  <title>Contato | Sabores em Fatias</title>
+  <link rel="stylesheet" href="pizza.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Sabores em Fatias</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cardapio.html">Cardápio</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contato">
+      <h2>Fale conosco</h2>
+      <p>Tem dúvidas, sugestões ou quer fazer um pedido? Preencha o formulário abaixo:</p>
+      <form id="form-contato" onsubmit="return validarFormulario()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone">
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar mensagem</button>
+      </form>
+
+      <div id="mensagem-sucesso" style="display: none;">
+        <p>Mensagem enviada com sucesso!</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function validarFormulario() {
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+
+      if (!nome || !email || !mensagem) {
+        alert("Por favor, preencha todos os campos obrigatórios!");
+        return false;
+      }
+
+      
+      document.getElementById('form-contato').style.display = 'none';
+      document.getElementById('mensagem-sucesso').style.display = 'block';
+
+      return false; 
+    }
+  </script>
+
+  <footer>
+    <p>&copy;2021 Sabores em Fatias</p>
+  </footer>
+
+</body>
+</html>
